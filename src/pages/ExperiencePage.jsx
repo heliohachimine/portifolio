@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function ExperiencePage() {
     const experiences = [
       {
@@ -37,8 +39,22 @@ export default function ExperiencePage() {
       },
     ];
 
+    const pageVariants = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: -20 },
+      };
+
+
     return (
-      <div className="w-full min-h-screen flex flex-col max-w-none min-h-screen bg-gradient-to-br from-sky-900 via-blue-800 to-blue-900 text-white px-4 sm:px-6 lg:px-12 py-12">
+        <motion.div
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.4 }}
+        >
+<div className="w-full min-h-screen flex flex-col max-w-none min-h-screen bg-gradient-to-br from-sky-900 via-blue-800 to-blue-900 text-white px-4 sm:px-6 lg:px-12 py-12">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center">
             Minha história
@@ -65,5 +81,7 @@ export default function ExperiencePage() {
           </div>
         </div>
       </div>
+        </motion.div>
+
     );
   }
