@@ -1,0 +1,18 @@
+:root {
+    /* 🎨 Cores */
+    --color-primary: #6C63FF;
+    --color-secondary: #FF6B6B;
+    --color-bg: #F8F8FA;
+    --color-text: #1E1E2F;
+    --color-accent: #3F3D56;
+
+    /* 🔤 Tipografia */
+    --font-family: 'Figtree', sans-serif;
+
+    /* 📐 Espaçamentos */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 40px;
+  }

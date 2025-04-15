@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './styles/variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #fff; /* ou dark mode depois */
+    color: #1a1a1a;
+  }
+
+  h1, h2, h3 {
+    font-weight: 700; /* negrito */
+  }
+
+  p, span {
+    font-weight: 400; /* normal */
+  }
+
+  strong {
+    font-weight: 600; /* semibold */
+  }
