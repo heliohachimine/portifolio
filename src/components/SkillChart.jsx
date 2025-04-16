@@ -1,40 +1,36 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import {
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  Radar,
+  ResponsiveContainer,
+} from "recharts";
 
 const data = [
   { name: "Comunicação", level: 73 },
-  { name: "Raciocinio Lógico", level: 85 },
-  { name: "Proatividade", level: 80 },
-  { name: "Criatividade", level: 66 },
-  { name: "Flexibilidade", level: 75 },
+  { name: "Lógica", level: 85 },
+  { name: "Proativo", level: 82 },
+  { name: "Criativo", level: 70 },
+  { name: "Flexivel", level: 75 },
 ];
 
-const COLORS = [
-  "#3b82f6", // blue-500
-  "#6366f1", // indigo-500
-  "#9333ea", // purple-600
-  "#14b8a6", // teal-500
-  "#eab308", // yellow-500
-  "#f43f5e", // rose-500
-];
-
-export default function SkillsChart() {
+export default function SkillsRadarChart() {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-white/10 backdrop-blur rounded-xl shadow-lg mt-10">
       <h2 className="text-white text-2xl font-bold mb-6 text-center">Perfil</h2>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart
-          layout="vertical"
-          data={data}
-          margin={{ top: 5, right: 30, left: 60, bottom: 5 }}
-        >
-          <XAxis type="number" domain={[0, 100]} hide />
-          <YAxis dataKey="name" type="category" stroke="#fff" />
-          <Bar dataKey="level" barSize={20} radius={[0, 10, 10, 0]}>
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Bar>
-        </BarChart>
+      <ResponsiveContainer width="100%" height={280}>
+        <RadarChart data={data}>
+          <PolarGrid stroke="#ccc" strokeDasharray="3 3" />
+          <PolarAngleAxis dataKey="name" tick={{ fill: "#fff", fontSize: 12 }} />
+          {/* PolarRadiusAxis removido para esconder os números */}
+          <Radar
+            name="Habilidades"
+            dataKey="level"
+            stroke="#3b82f6"
+            fill="#3b82f6"
+            fillOpacity={0.6}
+          />
+        </RadarChart>
       </ResponsiveContainer>
     </div>
   );

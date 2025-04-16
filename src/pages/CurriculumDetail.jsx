@@ -9,8 +9,12 @@ export default function Details() {
   return (
     <div className="p-16">
       <motion.div
-        layoutId={`card-${id}`}
-        className="bg-white text-white p-10 rounded-lg"
+         layoutId={`card-${id}`}
+         initial={{ opacity: 0, scale: 0.95 }}
+         animate={{ opacity: 1, scale: 1 }}
+         exit={{ opacity: 0, scale: 0.95 }} // <- animação de volta
+         transition={{ duration: 0.3 }}
+         className="max-w-2xl mx-auto mt-10 p-8 rounded-2xl bg-white text-blue-900 shadow-xl"
       >
         <h2>Detalhes do {id}</h2>
         <p>Conteúdo da nova página aqui...</p>

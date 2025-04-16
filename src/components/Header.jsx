@@ -19,7 +19,10 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <Link to="/">
         <h1 className="text-xl font-bold text-white">Helio</h1>
+        </Link>
+
         <nav className="flex gap-6 text-white text-sm md:text-base">
           <a href="#skills" className="hover:text-blue-300 transition">Habilidades</a>
           <Link to="/experience" className="hover:text-blue-300 transition">Experiências</Link>
