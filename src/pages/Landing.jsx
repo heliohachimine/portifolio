@@ -2,7 +2,6 @@ import { useRef } from "react";
 import HeroSection from ".././components/Hero";
 import CurriculumCards from ".././components/CurriculumCards";
 import Hobbies from "../components/Hobbies";
-import Footer from "../components/Footer";
 export default function Landing() {
   const heroRef = useRef(null);
 
@@ -14,9 +13,6 @@ export default function Landing() {
       </div>
       <CurriculumCards />
       <Hobbies />
-      <Footer />
-
-
       {/* Adicione aqui outras seções, ex: features, footer, etc */}
     </div>
   );
