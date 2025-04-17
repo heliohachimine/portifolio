@@ -46,8 +46,9 @@ const Hobbies = () => {
 
   return (
     <div className="hobbies-section">
-      <h2  className="text-3xl md:text-4xl font-bold mb-4" >Coisas que me inspiram e refletem minha essência</h2>
-      <div className="hobbies-list">
+<h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
+  Coisas que me inspiram e refletem minha essência
+</h2> <div className="hobbies-list">
         {hobbies.map((hobby) => (
           <div
             key={hobby.id}

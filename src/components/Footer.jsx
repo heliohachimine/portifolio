@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
-      <footer className="bg-white/10 backdrop-blur text-white py-10 mt-20">
+      <footer className="bg-neutral-900/80 backdrop-blur text-white py-10 mt-20">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Branding */}
           <div>
