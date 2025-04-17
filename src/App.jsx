@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { AnimatePresence } from "framer-motion";
 import Details from "./pages/CurriculumDetail";
+import Footer from "./components/Footer";
+
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
             <Route path="/details/:id" element={<Details />} />
           </Routes>
         </AnimatePresence>
+        <Footer />
       </Router>
     </div>
   );

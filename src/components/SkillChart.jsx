@@ -28,7 +28,7 @@ export default function SkillsRadarChart() {
 
       setData(
         BASE_DATA.map((item, i) => {
-          const variation = Math.sin(angle.current + i) * 5; // oscilação cíclica
+          const variation = Math.sin(angle.current + i) * 4; // oscilação cíclica
           return {
             ...item,
             level: item.level + variation,
