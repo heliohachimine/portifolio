@@ -21,7 +21,7 @@ export default function CurriculumCards() {
     {
       id: 3,
       title: "Habilidades Técnicas",
-      description: "React Native, Flutter, TypeScript, Node.js, e mais.",
+      description: "Flutter, Kotlin, Swift, TypeScript, Node.js, e mais.",
       icon: "🛠️",
     },
   ];
