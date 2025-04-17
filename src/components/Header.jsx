@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +30,16 @@ export default function Header() {
           <Link to="/experience" className="hover:text-blue-300 transition">Experiências</Link>
           <a href="#contact" className="hover:text-blue-300 transition">Contato</a>
         </nav>
+        <div className="flex gap-4">
+        <a href="https://github.com/heliohachimine" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={24} />
+                    </a>
+
+                    <a href="https://linkedin.com/in/helio-hachimine" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={24} />
+                    </a>
+        </div>
+
       </div>
     </header>
   );
